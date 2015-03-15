@@ -1,0 +1,20 @@
+.navigation {
+}
+
+.navigation li{
+	font-size: 22px;
+	font-family: arial;
+	padding: 23px;
+	font-weight: bold;
+	display: inline;
+	text-transform: uppercase;
+}
+
+.header {
+	font-family: tahoma;
+	font-size: 20px;
+}
+
+.maintext {
+	font-family: arial;
+}
