@@ -5,6 +5,10 @@
 	text-align: center;
 }
 
+.navigation a {
+	text-color: #3399ff;
+}
+
 .navigation li{
 	font-size: 22px;
 	font-family: arial;
@@ -14,9 +18,14 @@
 	text-transform: uppercase;
 }
 
-.header {
+.header 1{
 	font-family: tahoma;
 	font-size: 20px;
+}
+
+.header 2{
+	font-family: tahoma;
+	font-size: 18px;
 }
 
 .maintext {
