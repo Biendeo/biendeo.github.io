@@ -1,7 +1,7 @@
 .navigation {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: #cccccc;
+	background-color: #ccccdd;
 	text-align: center;
 }
 
@@ -16,6 +16,14 @@
 	font-weight: bold;
 	display: inline;
 	text-transform: uppercase;
+}
+
+.mainarea {
+	background-color: #ddddee;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .header1{
