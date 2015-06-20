@@ -18,16 +18,32 @@
 			<li><a href="../about.html">About</a></li>
 		</ul>
 	</div>
-		
+
 	<div class="header1">
 		<h1>Poop</h1>
 	</div>
-		
+
 	<div class="maintext">
-		<p id="test1">THIS ONE SHOULD PRINT THE FUNCTION</p>
-		<p id="test2">TEST</p>
-		<p id="test3">DOOP</p>
-		<script src="gamesscript.js"></script>
+		<!--Because the JS file has stuff outside of a function, it executes that first.-->
+		<script type="text/javascript" src="gamesscript.js"></script>
+
+		<!--But because there's a function, the HTML can call that whenever it wants.-->
+		<p id="test1">
+			<b>This should run <i>hello</i> with the parameter "bananas".</b><br />
+			<script>test1();</script>
+		</p>
+		<p id="test2">
+			<b>This should be like test 1, but it prints the return as well.</b><br />
+			<script>test2();</script>
+		</p>
+		<p id="test3">
+			<b>This should print <i>hello(capsicum)</i> 19 times.</b><br />
+			<script>test3(19);</script>
+		</p>
+		<p id="test4">
+			<b>This should run test 3, but it presents a dialogue box for the user to input how many iterations they want (doesn't really work right now).</b><br />
+			<script>test4();</script>
+		</p>
 	</div>
 </body>
 </html>
