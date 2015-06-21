@@ -1,6 +1,8 @@
 ﻿console.log("The header is a magical javascript file. Wooooh!");
 document.write(" \
 <base href=\"https://biendeo.github.io\"> \
+<link href=\"main.css\" rel=\"stylesheet\"> \
+<link rel=\"icon\" type=\"image/png\" href=\"images/favicon.png\"> \
 <div class=\"navigation\"> \
 	<ul> \
 		<li><a href=\"index.html\">Home</a></li> \
