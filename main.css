@@ -43,3 +43,13 @@ body {
 .maintext {
     font-family: arial;
 }
+
+.leftcolumn {
+	width: 30%;
+	float: left;
+}
+
+. rightcolumn {
+	width: 50%;
+	float: right;
+}
