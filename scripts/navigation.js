@@ -1,6 +1,6 @@
 ﻿console.log("The header is a magical javascript file. Wooooh!");
 document.write(" \
-<base href=\"https://biendeo.github.io/\"> \
+<base href=\"https://biendeo.github.io\"> \
 <div class=\"navigation\"> \
 	<ul> \
 		<li><a href=\"index.html\">Home</a></li> \
@@ -8,6 +8,6 @@ document.write(" \
 		<li><a href=\"https://www.youtube.com/user/Biendeo\">YouTube</a></li> \
 		<li><a href=\"https://www.twitter.com/Biendeo\">Twitter</a></li> \
 		<li><a href=\"http://www.steamcommunity.com/id/biendeo\">Steam</a></li> \
-		<li><a href=\"about.html\">About</a></li> \
+		<li><a href=\"/pages/about.html\">About</a></li> \
 	</ul> \
 </div>");
