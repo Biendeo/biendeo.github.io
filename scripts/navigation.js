@@ -13,8 +13,6 @@ if (url == "localhost") {
 	url = "https://" + url + "/";
 }
 
-console.log("url = " + url);
-
 document.write(" \
 <base href=" + url + "> \
 <link href=\"main.css\" rel=\"stylesheet\"> \
