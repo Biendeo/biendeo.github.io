@@ -21,7 +21,7 @@ document.write(" \
 <link rel=\"icon\" type=\"image/png\" href=\"images/favicon.png\"> \
 <div class=\"navigation\"> \
 	<ul> \
-		<li><a href=\"index.html\">Home</a></li> \
+		<li><a href=\"\">Home</a></li> \
 		<li><a href=\"https://github.com/Biendeo/I-Am-Learning-To-Code\">Coding</a></li> \
 		<li><a href=\"https://www.youtube.com/user/Biendeo\">YouTube</a></li> \
 		<li><a href=\"https://www.twitter.com/Biendeo\">Twitter</a></li> \
