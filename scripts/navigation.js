@@ -11,6 +11,8 @@ if (url == "localhost") {
 	url = "http://" + url + ":" + port + "/";
 }
 
+console.log("url = " + url);
+
 document.write(" \
 <base href=" + url + "> \
 <link href=\"main.css\" rel=\"stylesheet\"> \
