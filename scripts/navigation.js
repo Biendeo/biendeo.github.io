@@ -9,6 +9,8 @@ var port = window.location.port;
 // Purely, if I'm testing this locally, I want all the web elements to come from my computer.
 if (url == "localhost") {
 	url = "http://" + url + ":" + port + "/";
+} else {
+	url = "https://" + url + "/";
 }
 
 console.log("url = " + url);
