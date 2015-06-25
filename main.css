@@ -45,11 +45,21 @@ body {
 }
 
 .leftcolumn {
-	width: 30%;
+	display: block;
 	float: left;
 }
 
 . rightcolumn {
-	width: 50%;
+	padding-left: 500px;
+	display: block;
 	float: right;
+}
+
+.belowtext {
+	display: block;
+}
+
+.footer {
+	font-family: arial;
+	font-size: 12px;
 }

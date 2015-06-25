@@ -21,14 +21,7 @@ var test3 = function (maxIterations) {
 };
 
 var test4 = function () {
-	var x = document.createElement("INPUT");
-	x.setAttribute("type", "text");
-	x.setAttribute("value", "Type a number!");
-	document.body.appendChild(x);
-
-
-	var y = document.createElement("BUTTON");
-	y.setAttribute("value", "Click when done!");
-	document.body.appendChild(y);
-	test3(document.getElementById(x).value);
+	var x = document.getElementById("testFourNum");
+	console.log(x.value + " " + x.id);
+	test3(x.value);
 };
