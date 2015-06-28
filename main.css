@@ -1,5 +1,8 @@
 body {
     background-color: #aaaabb;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .navigation {
@@ -47,10 +50,10 @@ body {
 .leftcolumn {
 	display: block;
 	float: left;
+	padding-right: 50px;
 }
 
 . rightcolumn {
-	padding-left: 500px;
 	display: block;
 	float: right;
 }
