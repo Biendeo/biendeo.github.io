@@ -50,12 +50,18 @@ body {
 .leftcolumn {
 	display: block;
 	float: left;
-	padding-right: 50px;
+	padding-right: 40px;
+	bottom: auto;
+	min-width: 350px;
+	width: 50%;
 }
 
 . rightcolumn {
 	display: block;
 	float: right;
+	bottom: auto;
+	min-width: 350px;
+	width: 50%;
 }
 
 .belowtext {
@@ -65,4 +71,9 @@ body {
 .footer {
 	font-family: arial;
 	font-size: 12px;
+}
+
+video {
+    max-width: 100%;
+    max-height: 100%;
 }
