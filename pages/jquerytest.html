@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<title>The Biendeo Show</title>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript" src="/scripts/navigation.js"></script>
+
+	<div class="mainarea">
+		<div class="header1">
+			<h1>The JQuery Test!</h1>
+		</div>
+
+		<div class="maintext">
+			<script>
+				$(document).ready(function(){
+					$("#button1").click(function(){
+						$("#test1").hide();
+					});
+				});
+			</script>
+			<button id="button1">Goodbye text!</button>
+			<p id="test1">Nooo!!!</p>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/scripts/footer.js"></script>
+</body>
+</html>
