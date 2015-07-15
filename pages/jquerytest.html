@@ -3,11 +3,21 @@
 <html>
 
 <head>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="/scripts/baseurlgetter.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".navigation").load("pages/elements/navigation.html");
+		});
+	</script>
+
+	<link href="main.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body>
-	<script type="text/javascript" src="/scripts/navigation.js"></script>
+	<div class="navigation"></div>
 
 	<div class="mainarea">
 		<div class="header1">
@@ -16,8 +26,8 @@
 
 		<div class="maintext">
 			<script>
-				$(document).ready(function(){
-					$("#button1").click(function(){
+				$(document).ready(function () {
+					$("#button1").click(function () {
 						$("#test1").toggle(400);
 						if (document.getElementById("button1").textContent == "Goodbye text!")
 							document.getElementById("button1").textContent = "Hello text!";
