@@ -1,0 +1,39 @@
+﻿<div class="header1">
+	<h1>Poop</h1>
+</div>
+
+<div class="maintext">
+	<!--Because the JS file has stuff outside of a function, it executes that first.-->
+	<script type="text/javascript" src="/scripts/javascripttest.js"></script>
+
+	<!--But because there's a function, the HTML can call that whenever it wants.-->
+	<p id="test1">
+		<b>This should run <i>hello</i> with the parameter "bananas".</b><br />
+		<script>
+			$(document).ready(function () {
+				test1();
+			});
+		</script>
+	</p>
+	<p id="test2">
+		<b>This should be like test 1, but it prints the return as well.</b><br />
+		<script>
+			$(document).ready(function () {
+				test2();
+			});
+		</script>
+	</p>
+	<p id="test3">
+		<b>This should print <i>hello(capsicum)</i> 19 times.</b><br />
+		<script>
+			$(document).ready(function () {
+				test3(19);
+			});
+		</script>
+	</p>
+	<p id="test4">
+		<b>This should run test 3, but it presents a dialogue box for the user to input how many iterations they want (doesn't really work right now).</b><br />
+		<input type="text" id="testFourNum" value="Type a number!">
+		<a href="javascript: test4()">Run!</a>
+	</p>
+</div>
