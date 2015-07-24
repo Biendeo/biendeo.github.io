@@ -1,50 +1,50 @@
 body {
-    background-color: #aaaabb;
+	background-color: #aaaabb;
 	max-width: 1280px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .navigation {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #ccccdd;
-    text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #ccccdd;
+	text-align: center;
 }
 
-    .navigation a {
-        text-color: #3399ff;
-    }
+	.navigation a {
+		text-color: #3399ff;
+	}
 
-    .navigation li {
-        font-size: 22px;
-        font-family: arial;
-        padding: 23px;
-        font-weight: bold;
-        display: inline;
-        text-transform: uppercase;
-    }
+	.navigation li {
+		font-size: 22px;
+		font-family: arial;
+		padding: 23px;
+		font-weight: bold;
+		display: inline;
+		text-transform: uppercase;
+	}
 
 .mainarea {
-    background-color: #ddddee;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+	background-color: #ddddee;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .header1 {
-    font-family: tahoma;
-    font-size: 20px;
+	font-family: tahoma;
+	font-size: 20px;
 }
 
 .header2 {
-    font-family: tahoma;
-    font-size: 18px;
+	font-family: tahoma;
+	font-size: 18px;
 }
 
 .maintext {
-    font-family: arial;
+	font-family: arial;
 }
 
 .leftcolumn {
@@ -74,6 +74,6 @@ body {
 }
 
 video {
-    max-width: 100%;
-    max-height: 100%;
+	max-width: 100%;
+	max-height: 100%;
 }
