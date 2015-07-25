@@ -48,17 +48,15 @@ body {
 }
 
 .leftcolumn {
-	display: block;
-	float: left;
+	display: inline-block;
 	padding-right: 40px;
 	bottom: auto;
 	min-width: 350px;
-	width: 50%;
+	width: 45%;
 }
 
-. rightcolumn {
-	display: block;
-	float: right;
+.rightcolumn {
+	display: inline-block;
 	bottom: auto;
 	min-width: 350px;
 	width: 50%;

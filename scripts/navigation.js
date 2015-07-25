@@ -26,6 +26,21 @@ var loadJQueryTest = function () {
     swapURL("/pages/jquerytest.html");
 };
 
+var loadTerminalWars = function () {
+    $(".mainarea").load("pages/elements/terminalwarscontent.html");
+    swapURL("/pages/terminalwars.html");
+};
+
+var loadLinkedListViewer = function () {
+    $(".mainarea").load("pages/elements/linkedlistviewercontent.html");
+    swapURL("/pages/linkedlistviewer.html");
+};
+
+var loadCalculator = function () {
+    $(".mainarea").load("pages/elements/calculatorcontent.html");
+    swapURL("/pages/calculator.html");
+};
+
 var swapURL = function (directory) {
     if (url == "localhost") {
         // window.location.href = protocol + "//" + url + ":" + port + directory;
