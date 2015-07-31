@@ -9,7 +9,10 @@ console.log(path.substring(/\/pages/g));
 
 // Now we clean the pathname of folders that I'm expecting.
 // This allows me to host this as a subdomain of another website.
-path = path.replace(path.substring(/\/pages|\/scripts|\/images|\/.*\.html/g), "");
+var pathpos = path.substring(/\/pages|\/scripts|\/images|[^\/]*\.html/g);
+if (pathpos >= 0) {
+    path = path.replace(pathpos, "");
+}
 
 // If you're looking at this, then this is just for debugging.
 // Purely, if I'm testing this locally, I want all the web elements to come from my computer.
@@ -21,7 +24,7 @@ if (url == "localhost") {
         // automatically redirect to the HTTPS version.
         window.location.replace("https://" + url + path);
     }
-    url = "https://" + url + "/";
+    url = "https://" + url + path;
 }
 console.log(path);
 console.log(url);
