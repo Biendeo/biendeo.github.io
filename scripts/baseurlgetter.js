@@ -4,6 +4,8 @@ var protocol = window.location.protocol
 var url = window.location.hostname;
 var path = window.location.pathname;
 var port = window.location.port;
+console.log(path);
+console.log(path.substring(/\/pages/g));
 
 // Now we clean the pathname of folders that I'm expecting.
 // This allows me to host this as a subdomain of another website.
@@ -21,5 +23,7 @@ if (url == "localhost") {
     }
     url = "https://" + url + "/";
 }
+console.log(path);
+console.log(url);
 
 document.write("<base href=" + url + ">");
