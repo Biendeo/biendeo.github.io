@@ -133,7 +133,7 @@ var dialogueProceed = function(trigger, input) {
 				case 1:
 					typeWriterEffect(".display-content", "What did the cannibal do after he dumped his girlfriend?" + "<br /><br />" + "He wiped his butt!", 40);
 					break;
-				case 1:
+				case 2:
 					typeWriterEffect(".display-content", "Those deadbeat kids. They're too ghoul for school!", 40);
 					break;
 				default:
