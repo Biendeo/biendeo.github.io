@@ -64,6 +64,8 @@ var inputToTriggerIndex = function(input) {
 			return 14;
 		case "this website":
 			return 15;
+		case "doge":
+			return 16;
 	}
 }
 
@@ -155,6 +157,10 @@ var dialogueProceed = function(trigger, input) {
 		case 15:
 			typeWriterEffect(".display-content", "This website was done entirely in Javascript and JQuery. It's basically just a load of check prompts, and responses to those. If you really want to, you can view the page source to see how it works, or check out the hosting on <a href='https://github.com/Biendeo/biendeo.github.io'>Github</a> <i>(external link)</i>." + "<br /><br />" + "Go back with " + inputToAHrefFunction("help") + ".", 40);
 			screen = 15;
+			break;
+		case 16:
+			typeWriterEffect(".display-content", '<video preload="auto" autoplay="autoplay" muted="muted" loop="loop"><source src="https://i.imgur.com/ISfNKj9.webm" type="video/webm"></video>', 40)
+			screen = 16;
 			break;
 	}
 };

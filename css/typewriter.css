@@ -20,6 +20,10 @@ body {
 	padding: 5px;
 }
 
+.display-content video {
+	max-width: 100%;
+}
+
 .input-prompt {
 	border: solid 1px #666666;
 	height: 32px;
