@@ -1,0 +1,54 @@
+body {
+	background-color: #000000;
+	font-family: courier;
+	color: #999999;
+}
+
+.main-content {
+	margin: auto;
+	width: 640px;
+	height: 480px;
+}
+
+.screen-display {
+	border: solid 1px #666666;
+	height: 448px;
+	background-color: #050505;
+}
+
+.display-content {
+	padding: 5px;
+}
+
+.input-prompt {
+	border: solid 1px #666666;
+	height: 32px;
+	background-color: #050505;
+}
+
+.input-prompt input {
+	height: 28px;
+	background-color: #050505;
+	color: #666666;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 98%;
+	border: none;
+	font-family: courier;
+}
+
+a:link {
+	color: #AADDAA;
+}
+
+a:visited {
+	color: #99BB99;
+}
+
+a:hover {
+	color: #99DD99;
+}
+
+a:active {
+	color: #99CC99;
+}
