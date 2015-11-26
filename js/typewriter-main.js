@@ -39,7 +39,11 @@ var typeWriterEffect = function(element, textToGo, currentText, speed) {
 	}
 };
 
-var screen = 0;
+var typewriter = {
+	screen: 0,
+	speed: 20,
+	string: ""
+}
 
 $(document).on("keypress", "#input-prompt-field", function(event) {
 	if (event.which == 13) {
@@ -106,100 +110,197 @@ var inputToAHrefFunction = function(input) {
 
 var dialogueProceed = function(trigger, input) {
 	$(".display-content").html("");
+
 	switch(trigger) {
 		case 0:
-			commenceTypeWriter(".display-content", "Welcome to the Biendeo website!" + "<br />" + "Input some words in the box below, or click the links to see things!" + "<br /><br />" + "Check out " + inputToAHrefFunction("what's new") + "." + "<br /><br />" + "Go " + inputToAHrefFunction("home") + ".", 20);
+			$(".hidden-text").load("html/typewriter-lines.html #start", function() {
+				typewriter.screen = 0;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 1:
 		default:
 			commenceTypeWriter(".display-content", "I don't know what you mean by <i>" + input + "</i>. Try something else, or type " + inputToAHrefFunction("home") + ".", 20);
 			break;
 		case 2:
-			switch(screen) {
+			switch(typewriter.screen) {
 				case 0:
 				default:
-					commenceTypeWriter(".display-content", "Sure, I guess... You should just type " + inputToAHrefFunction("home") + " in case.", 20);
+					$(".hidden-text").load("html/typewriter-lines.html #okay", function() {
+						typewriter.screen = 2;
+						typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+						typewriter.speed = 20;
+						prepareTypeWriter();
+					});
 					break;
 			}
-			screen = 2;
 			break;
 		case 3:
-			commenceTypeWriter(".display-content", "This website controls like a text-based adventure, but I also let you just click on links if you want to operate it that way. Of course, there's neat secrets to find. :)" + "<br /><br />" + "The main features are found at " + inputToAHrefFunction("Code") + ", " + inputToAHrefFunction("Cool Stuff") + ", and " + inputToAHrefFunction("About") + "." + "<br /><br />" + "Some people may also want to find my " + inputToAHrefFunction("Twitter") + ", " + inputToAHrefFunction("YouTube") + ", or " + inputToAHrefFunction("Steam") + "." + "<br /><br />" + "You can also email me at <a href='mailto://biendeos@gmail.com'>biendeos@gmail.com</a> about anything really. I try to reply to these quickly. :)", 20);
+			$(".hidden-text").load("html/typewriter-lines.html #home", function() {
+				// Screen does not change.
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 4:
-			commenceTypeWriter(".display-content", "That's the box where you type commands! Type something there, like " + inputToAHrefFunction("home") + "!", 20);
-			screen = 4;
+			$(".hidden-text").load("html/typewriter-lines.html #blank", function() {
+				typewriter.screen = 4;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 5:
-			commenceTypeWriter(".display-content", "I'm currently doing a software engineering degree at UNSW. I'm currently a first year student, but I've done quite a lot of awesome stuff already. Here's some cool stuff that I've done." + "<br /><br />" + "<ul>" + "<li>" + inputToAHrefFunction("Terminal Wars") + "</li>" + "<li>" + inputToAHrefFunction("Bitter") + "</li>" + "<li>" + inputToAHrefFunction("Github") + "</li>" + "</li>" + "<li>" + inputToAHrefFunction("This Website") + "</li>" + "</ul>" + "<br /><br />" + "Go back " + inputToAHrefFunction("home") + ".", 20);
-			screen = 5;
+			$(".hidden-text").load("html/typewriter-lines.html #code", function() {
+				typewriter.screen = 5;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 6:
-			commenceTypeWriter(".display-content", "Later on I'll be button some neat stuff in here. You can type " + inputToAHrefFunction("joke") + ". :)" + "<br /><br />" + "Go back " + inputToAHrefFunction("home") + ".", 20);
-			screen = 6;
+			$(".hidden-text").load("html/typewriter-lines.html #coolstuff", function() {
+				typewriter.screen = 6;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 7:
-			commenceTypeWriter(".display-content", "I'm Thomas Moffet, but you may also know me by my internet name of Biendeo. I'm currently doing a software engineering degree at UNSW, and I'm looking toward graduating in 2018. I don't really know where or what field in particular I'll be working with in the future, but I'm absolutely loving programming. I made this sweet website because of it!" + "<br /><br />" + "Some of you may know I love playing video games in my spare time. A lot. I play way too many for my own good. Still, I think in a few years, we can see video games being held in such a respectable position as music or television. Maybe. Depends if there's less corporate business about it and more artistic merit. Still, I think that there's always something awesome to play. :)" + "<br /><br />" + "If this about page seems bad, that's because I'm writing it way late at night. I'll clean it up later. I promise. ;3" + "<br /><br />" + "Go back " + inputToAHrefFunction("home") + ".", 20);
-			screen = 7;
+			$(".hidden-text").load("html/typewriter-lines.html #about", function() {
+				typewriter.screen = 7;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 8:
-			commenceTypeWriter(".display-content", "I have a Twitter account mostly for my " + inputToAHrefFunction("YouTube") + " channel, but I sometimes post about things I'm doing there. You can check it out <a href='https://twitter.com/biendeo'>here</a> <i>(external link)</i>." + "<br /><br />" + "Go back " + inputToAHrefFunction("home") + ".", 20);
-			screen = 8;
+			$(".hidden-text").load("html/typewriter-lines.html #twitter", function() {
+				typewriter.screen = 8;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 9:
-			commenceTypeWriter(".display-content", "I do a YouTube channel where I do analytical videos of video games, as well as Let's Play commentary on games that I enjoy." + "<br /><br />" + "You can check it out <a href='https://youtube.com/biendeo'>here</a> <i>(external link)</i>." + "<br /><br />" + "Unfortunately I've been pretty lazy on doing new videos, but don't worry, there will be new content in November! Trust me!" + "<br /><br />" + "Go back " + inputToAHrefFunction("home") + ".", 20);
-			screen = 9;
+			$(".hidden-text").load("html/typewriter-lines.html #youtube", function() {
+				typewriter.screen = 9;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 10:
-			commenceTypeWriter(".display-content", "I play too many games in my spare time. I have a Steam account if you want to stalk me <a href='http://steamcommunity.com/id/biendeo/'>there</a> <i>(external link)</i>. :)" + "<br /><br />" + "Go back " + inputToAHrefFunction("home") + ".", 20);
-			screen = 10;
+			$(".hidden-text").load("html/typewriter-lines.html #steam", function() {
+				typewriter.screen = 10;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 11:
 			var totalJokes = 4;
-			var random = Math.floor(Math.random() * totalJokes);
-			switch(random % totalJokes) {
-				case 0:
-					commenceTypeWriter(".display-content", "Why did the doctor cross the road?" + "<br /><br />" + "Insurance of course!", 20);
-					break;
-				case 1:
-					commenceTypeWriter(".display-content", "What did the cannibal do after he dumped his girlfriend?" + "<br /><br />" + "He wiped his butt!", 20);
-					break;
-				case 2:
-					commenceTypeWriter(".display-content", "Those deadbeat kids. They're too ghoul for school!", 20);
-					break;
-				default:
-					commenceTypeWriter(".display-content", "I'm not that funny!", 20);
-					break;
-			}
-			screen = 11;
+			var random = Math.floor(Math.random() * totalJokes) + 1;
+			$(".hidden-text").load("html/typewriter-lines.html #joke" + random.toString(), function() {
+				typewriter.screen = 11;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 12:
-			commenceTypeWriter(".display-content", "Terminal Wars is an Advance Wars clone I made entirely in C for my first semester COMP1917 class. I created it to demonstrate my ability in planning and debugging. It's a little bit incomplete, as there is no functional buy menu for sea or air units, nor is there any win state in the game, but overall it recreates the game quite nicely." + "<br /><br />" + "Check it out <a href='https://github.com/Biendeo/I-Am-Learning-To-Code/tree/master/009%20-%20Terminal%20Wars'>here</a> <i>(external link)</i>." + "<br /><br />" + "Go back to " + inputToAHrefFunction("code") + "." + "<br />" + "Go back " + inputToAHrefFunction("home") + ".", 20);
-			screen = 12;
+			$(".hidden-text").load("html/typewriter-lines.html #terminalwars", function() {
+				typewriter.screen = 12;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 13:
-			commenceTypeWriter(".display-content", "I do a bunch of code on Github, mostly for personal tests and stuff. Right now, I'm working on creating C++ interpretations of data structures I've learned about at uni." + "<br /><br />" + "You can check out my Github <a href='https://github.com/Biendeo'>here</a> <i>(external link)</i>." + "<br /><br />" + "Go back to " + inputToAHrefFunction("code") + "." + "<br />" + "Go back with " + inputToAHrefFunction("home") + ".", 20);
-			screen = 13;
+			$(".hidden-text").load("html/typewriter-lines.html #github", function() {
+				typewriter.screen = 13;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 14:
-			commenceTypeWriter(".display-content", "Bitter is my COMP2041 assignment. Basically, we were told to basically re-create Twitter using CGI. I did mine mostly in Python, with hints of Javascript and JQuery about. There's some basic features to be used, but I think I did quite a nice job not only getting it to work properly, but also looking nice. I did like 99% of the CSS from scratch, and I think it's pretty awesome." + "<br /><br />" + "You can check it out <a href='http://cgi.cse.unsw.edu.au/~z5061905/15s2-comp2041-cgi/ass2/bitter.cgi'>here</a> <i>(external link)</i>." + "<br /><br />" + "Go back to " + inputToAHrefFunction("code") + "." + "<br />" + "Go back " + inputToAHrefFunction("home") + ".", 20);
-			screen = 14;
+			$(".hidden-text").load("html/typewriter-lines.html #bitter", function() {
+				typewriter.screen = 14;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 15:
-			commenceTypeWriter(".display-content", "This website was done entirely in Javascript and JQuery. It's basically just a load of check prompts, and responses to those. If you really want to, you can view the page source to see how it works, or check out the hosting on <a href='https://github.com/Biendeo/biendeo.github.io'>Github</a> <i>(external link)</i>." + "<br /><br />" + "Go back to " + inputToAHrefFunction("code") + "." + "<br />" + "Go back " + inputToAHrefFunction("home") + ".", 20);
-			screen = 15;
+			$(".hidden-text").load("html/typewriter-lines.html #website", function() {
+				typewriter.screen = 15;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 16:
-			commenceTypeWriter(".display-content", '<video preload="auto" autoplay="autoplay" muted="muted" loop="loop"><source src="https://i.imgur.com/ISfNKj9.webm" type="video/webm"></video>', 20);
-			screen = 16;
+			$(".hidden-text").load("html/typewriter-lines.html #doge", function() {
+				typewriter.screen = 16;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 17:
-			commenceTypeWriter(".display-content", "I'll make a Dungeonman reference here later, for now, I'll be lazy and just link you to <a href='http://www.homestarrunner.com/dungeonman.html'>the original</a>. HAHAHA!", 20);
-			screen = 16;
+			$(".hidden-text").load("html/typewriter-lines.html #doge", function() {
+				typewriter.screen = 17;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 		case 18:
-			commenceTypeWriter(".display-content", "<b>1/11/15</b>: I'm working on getting more features on this website. I want to make it a bit easier to use (because right now everything is tucked away a bit). I also want to try and get the interface to look better. It's got that retro look, but there's no wow, it just looks plain.", 20);
-			screen = 17;
+			$(".hidden-text").load("html/typewriter-lines.html #new", function() {
+				typewriter.screen = 18;
+				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
+				typewriter.speed = 20;
+				prepareTypeWriter();
+			});
 			break;
 	}
 };
+
+var prepareTypeWriter = function() {
+	$(".hidden-text").html("");
+	commenceTypeWriter(".display-content", typewriter.string, typewriter.speed);
+	backgroundFade(typewriter.screen);
+}
+
+var backgroundFade = function(screen) {
+	switch (screen) {
+		case 0:
+			$("body").delay(500).fadeTo('slow', 1).css("background-color", "#000000");
+			break;
+		case 3:
+			$("body").delay(500).fadeTo('slow', 1).css("background-color", "#3333FF");
+			break;
+	}
+};
+
+var replaceAHrefTags = function(string) {
+	var re = /\|\|\|(.+?)\|\|\|/g;
+
+	matches = string.match(re);
+
+	if (matches == null) {
+		return string;
+	}
+
+	for (var i = 0; i < matches.length; i++) {
+		matches[i] = matches[i].replace("|||", "");
+		matches[i] = matches[i].replace("|||", "");
+		string = string.replace("|||" + matches[i] + "|||", inputToAHrefFunction(matches[i]));
+	}
+
+	return string;
+}

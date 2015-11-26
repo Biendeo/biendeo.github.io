@@ -58,3 +58,12 @@ a:hover {
 a:active {
 	color: #99CC99;
 }
+
+.hidden-text {
+	color: #000000;
+	font-size: 1px;
+}
+
+.hidden-text a {
+	color: #000000;
+}
