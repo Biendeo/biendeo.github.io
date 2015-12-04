@@ -48,5 +48,5 @@ var loadCookie = function(code) {
 }
 
 var saveCookie = function(code) {
-	Cookies.set(code, $("#" + code + "-DATA").serialize());
+	Cookies.set(code, $("#" + code + "-DATA").serialize(), { expires: 1000 });
 }
