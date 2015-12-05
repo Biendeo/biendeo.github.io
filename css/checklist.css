@@ -45,4 +45,6 @@ nav {
 .checklist-column-3 {
 	width: 33%;
 	float: left;
+	position: fixed;
+	right: 0%;
 }
