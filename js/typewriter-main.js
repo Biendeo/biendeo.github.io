@@ -101,6 +101,8 @@ var inputToTriggerIndex = function(input) {
 		case "whats new":
 		case "what is new":
 			return 18;
+		case "checklist":
+			return 19;
 	}
 }
 
@@ -267,6 +269,8 @@ var dialogueProceed = function(trigger, input) {
 				prepareTypeWriter();
 			});
 			break;
+		case 19:
+			window.location.href = "/html/checklist.html";
 	}
 };
 
