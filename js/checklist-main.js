@@ -19,6 +19,7 @@ $(document).on("click", ".game-button", function(event) {
 			max: 100,
 			value: 25
 		});
+		updatePercentage();
 	});
 });
 
