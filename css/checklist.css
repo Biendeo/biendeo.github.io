@@ -28,8 +28,11 @@
 }
 
 nav {
-	display: block;
 	text-align: center;
+}
+
+.navigation-block {
+	height: 30px;
 }
 
 .checklist-column-1 {

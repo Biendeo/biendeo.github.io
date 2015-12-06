@@ -8,6 +8,9 @@ var updatePercentage = function() {
 		case "GTA-III":
 			calculate_GTA_III();
 			break;
+		case "GTA-IV":
+			calculate_GTA_IV();
+			break;
 	}
 }
 
@@ -105,26 +108,24 @@ var calculate_GTA_III = function() {
 		var key = data[i].split("=")[0];
 		var value = data[i].split("=")[1];
 
-		//console.log(key.substring(0, 1));
-
 		// THIS AREA ADDS THE VALUES
 		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) <= 5) currentMissionsPortlandLuigi++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 5 && parseInt(key.substring(1, 3)) <= 11) currentMissionsPortlandJoey++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 11 && parseInt(key.substring(1, 3)) <= 16) currentMissionsPortlandToni++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 16 && parseInt(key.substring(1, 3)) <= 20) currentMissionsPortlandSalvatore++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 20 && parseInt(key.substring(1, 3)) <= 25) currentMissionsStauntonIslandAsuka++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 25 && parseInt(key.substring(1, 3)) <= 30) currentMissionsStauntonIslandKenji++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 30 && parseInt(key.substring(1, 3)) <= 35) currentMissionsStauntonIslandRay++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 35 && parseInt(key.substring(1, 3)) <= 38) currentMissionsStauntonIslandDonald++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 38 && parseInt(key.substring(1, 3)) <= 41) currentMissionsShoresideValeDonald++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 41 && parseInt(key.substring(1, 3)) <= 42) currentMissionsShoresideValeRay++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 42 && parseInt(key.substring(1, 3)) <= 47) currentMissionsShoresideValeAsuka++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 47 && parseInt(key.substring(1, 3)) <= 51) currentMissionsPayphoneMarty++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 51 && parseInt(key.substring(1, 3)) <= 55) currentMissionsPayphoneBurro++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 55 && parseInt(key.substring(1, 3)) <= 59) currentMissionsPayphoneCourtney++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 59 && parseInt(key.substring(1, 3)) <= 64) currentMissionsPayphoneDIce++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 64 && parseInt(key.substring(1, 3)) <= 68) currentMissionsOtherOffroad++;
-		if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 68 && parseInt(key.substring(1, 3)) <= 72) currentMissionsOtherRC++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 5 && parseInt(key.substring(1, 3)) <= 11) currentMissionsPortlandJoey++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 11 && parseInt(key.substring(1, 3)) <= 16) currentMissionsPortlandToni++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 16 && parseInt(key.substring(1, 3)) <= 20) currentMissionsPortlandSalvatore++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 20 && parseInt(key.substring(1, 3)) <= 25) currentMissionsStauntonIslandAsuka++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 25 && parseInt(key.substring(1, 3)) <= 30) currentMissionsStauntonIslandKenji++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 30 && parseInt(key.substring(1, 3)) <= 35) currentMissionsStauntonIslandRay++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 35 && parseInt(key.substring(1, 3)) <= 38) currentMissionsStauntonIslandDonald++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 38 && parseInt(key.substring(1, 3)) <= 41) currentMissionsShoresideValeDonald++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 41 && parseInt(key.substring(1, 3)) <= 42) currentMissionsShoresideValeRay++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 42 && parseInt(key.substring(1, 3)) <= 47) currentMissionsShoresideValeAsuka++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 47 && parseInt(key.substring(1, 3)) <= 51) currentMissionsPayphoneMarty++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 51 && parseInt(key.substring(1, 3)) <= 55) currentMissionsPayphoneBurro++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 55 && parseInt(key.substring(1, 3)) <= 59) currentMissionsPayphoneCourtney++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 59 && parseInt(key.substring(1, 3)) <= 64) currentMissionsPayphoneDIce++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 64 && parseInt(key.substring(1, 3)) <= 68) currentMissionsOtherOffroad++;
+		else if (key.substring(0, 1) == "M" && parseInt(key.substring(1, 3)) > 68 && parseInt(key.substring(1, 3)) <= 72) currentMissionsOtherRC++;
 		else if (key == "V01") currentVehicleAmbulance = parseInt(value);
 		else if (key == "V02") currentVehicleFirefighterPortland = parseInt(value);
 		else if (key == "V03") currentVehicleFirefighterStauntonIsland = parseInt(value);
@@ -163,5 +164,80 @@ var calculate_GTA_III = function() {
 	$("#hiddenpackage-total").html(floatToPercent(currentHiddenPackages / totalHiddenPackages, 0));
 	$("#rampage-total").html(floatToPercent(currentRampages / totalRampages, 0));
 	$("#stuntjump-total").html(floatToPercent(currentUniqueJumps / totalUniqueJumps, 0));
+}
+
+
+var calculate_GTA_IV = function() {
+	var data = $("#" + "GTA-IV" + "-DATA").serialize().split("&");
+
+	// THIS AREA INITIALISES VALUES FOR CALCULATING THE PERCENTAGES
+	// CONSTANTS
+	var totalMissions = 85;
+	var totalDrugDeliveries = 10;
+	var totalBrucieRaces = 9;
+	var totalExoticExports = 10;
+	var totalFixerAssassinations = 9;
+	var totalCarThefts = 30;
+	var totalFriendshipPoints = 22;
+	var totalGamePoints = 4;
+	var totalRandomCharacters = 16;
+	var totalMostWanted = 30;
+	var totalVigilante = 20;
+	var totalPigeons = 200;
+	var totalStuntJumps = 50;
+
+
+	// CALCULATED VALUES
+	var totalPercent = 0.00;
+	var currentMissions = 0;
+	var currentDrugDeliveries = 0;
+	var currentBrucieRaces = 0;
+	var currentExoticExports = 0;
+	var currentFixerAssassinations = 0;
+	var currentCarThefts = 0;
+	var currentFriendshipPoints = 0;
+	var currentGamePoints = 0;
+	var currentRandomCharacters = 0;
+	var currentMostWanted = 0;
+	var currentVigilante = 0;
+	var currentPigeons = 0;
+	var currentStuntJumps = 0;
+
+
+
+	for (var i = 0; i < data.length; i++) {
+		var key = data[i].split("=")[0];
+		var value = data[i].split("=")[1];
+
+		// THIS AREA ADDS THE VALUES
+		if (key.substring(0, 2) == "MI") currentMissions++;
+		else if (key == "DD") currentDrugDeliveries = parseInt(value);
+		else if (key == "BR") currentBrucieRaces = parseInt(value);
+		else if (key == "EE") currentExoticExports = parseInt(value);
+		else if (key == "FA") currentFixerAssassinations = parseInt(value);
+		else if (key.substring(0, 2) == "CT") currentCarThefts++;
+		else if (key.substring(0, 2) == "FR") currentFriendshipPoints++;
+		else if (key.substring(0, 2) == "GP") currentGamePoints++;
+		else if (key.substring(0, 2) == "RC" && parseInt(key.substring(1, 3)) <= 16) currentRandomCharacters++;
+		else if (key.substring(0, 2) == "MW") currentMostWanted++;
+		else if (key == "VI") currentVigilante = parseInt(value);
+		else if (key.substring(0, 2) == "PI") currentPigeons++;
+		else if (key.substring(0, 2) == "SJ") currentStuntJumps++;
+
+	}
+
+	// THIS AREA CALCULATES THE OVERALL PERCENTAGE
+
+	totalPercent = ((currentMissions / totalMissions) * 0.6) + ((currentDrugDeliveries / totalDrugDeliveries) * 0.02) + ((currentBrucieRaces / totalBrucieRaces) * 0.02) + ((currentExoticExports / totalExoticExports) * 0.02) + ((currentFixerAssassinations / totalFixerAssassinations) * 0.02) + ((currentCarThefts / totalCarThefts) * 0.02) + ((currentFriendshipPoints / totalFriendshipPoints) * 0.1) + ((currentGamePoints / totalGamePoints) * 0.05) + ((currentRandomCharacters / totalRandomCharacters) * 0.05) + ((currentMostWanted / totalMostWanted) * 0.025) + ((currentVigilante / totalVigilante) * 0.025) + ((currentPigeons / totalPigeons) * 0.025) + ((currentStuntJumps / totalStuntJumps) * 0.025);
+
+	// THIS AREA PRESENTS IT
+	$("#grand-total").html(floatToPercent(totalPercent, 4));
+	$("#mission-total").html(floatToPercent(currentMissions / totalMissions, 2));
+	$("#random-total").html(floatToPercent(currentRandomCharacters / totalRandomCharacters, 2));
+	$("#side-total").html(floatToPercent(((currentDrugDeliveries / totalDrugDeliveries) * 0.2) + ((currentBrucieRaces / totalBrucieRaces) * 0.2) + ((currentExoticExports / totalExoticExports) * 0.2) + ((currentFixerAssassinations / totalFixerAssassinations) * 0.2) + ((currentCarThefts / totalCarThefts) * 0.2), 2));
+	$("#friend-total").html(floatToPercent(currentFriendshipPoints / totalFriendshipPoints, 2));
+	$("#mostwanted-total").html(floatToPercent(currentMostWanted / totalMostWanted, 1));
+	$("#pigeon-total").html(floatToPercent(currentPigeons / totalPigeons, 1));
+	$("#stuntjump-total").html(floatToPercent(currentStuntJumps / totalStuntJumps, 0));
 }
 
