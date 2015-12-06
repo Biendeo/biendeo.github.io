@@ -218,7 +218,7 @@ var calculate_GTA_IV = function() {
 		else if (key.substring(0, 2) == "CT") currentCarThefts++;
 		else if (key.substring(0, 2) == "FR") currentFriendshipPoints++;
 		else if (key.substring(0, 2) == "GP") currentGamePoints++;
-		else if (key.substring(0, 2) == "RC" && parseInt(key.substring(1, 3)) <= 16) currentRandomCharacters++;
+		else if (key.substring(0, 2) == "RC" && parseInt(key.substring(2, 4)) <= 16) currentRandomCharacters++;
 		else if (key.substring(0, 2) == "MW") currentMostWanted++;
 		else if (key == "VI") currentVigilante = parseInt(value);
 		else if (key.substring(0, 2) == "PI") currentPigeons++;
