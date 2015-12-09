@@ -172,7 +172,7 @@ var calculate_GTA_IV = function() {
 
 	// THIS AREA INITIALISES VALUES FOR CALCULATING THE PERCENTAGES
 	// CONSTANTS
-	var totalMissions = 85;
+	var totalMissions = 88;
 	var totalDrugDeliveries = 10;
 	var totalBrucieRaces = 9;
 	var totalExoticExports = 10;
