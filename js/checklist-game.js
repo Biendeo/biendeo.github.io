@@ -11,6 +11,9 @@ var updatePercentage = function() {
 		case "GTA-IV":
 			calculate_GTA_IV();
 			break;
+		case "GTA-TLAD":
+			calculate_GTA_TLAD();
+			break;
 	}
 }
 
@@ -210,7 +213,12 @@ var calculate_GTA_IV = function() {
 		var value = data[i].split("=")[1];
 
 		// THIS AREA ADDS THE VALUES
-		if (key.substring(0, 2) == "MI") currentMissions++;
+		if (key.substring(0, 2) == "MI") {
+			currentMissions++;
+			if (currentMissions > totalMissions) {
+				currentMissions = totalMissions;
+			}
+		}
 		else if (key == "DD") currentDrugDeliveries = parseInt(value);
 		else if (key == "BR") currentBrucieRaces = parseInt(value);
 		else if (key == "EE") currentExoticExports = parseInt(value);
@@ -239,5 +247,72 @@ var calculate_GTA_IV = function() {
 	$("#mostwanted-total").html(floatToPercent(currentMostWanted / totalMostWanted, 1));
 	$("#pigeon-total").html(floatToPercent(currentPigeons / totalPigeons, 1));
 	$("#stuntjump-total").html(floatToPercent(currentStuntJumps / totalStuntJumps, 0));
+}
+
+
+var calculate_GTA_TLAD = function() {
+	var data = $("#" + "GTA-TLAD" + "-DATA").serialize().split("&");
+
+	// THIS AREA INITIALISES VALUES FOR CALCULATING THE PERCENTAGES
+	// CONSTANTS
+	var totalMissions = 22;
+	var totalGangWars = 25;
+	var totalBikeRaces = 12;
+	var totalBikeThefts = 10;
+	var totalSeagulls = 50;
+	var totalRandomCharacters = 3;
+	var totalJobs = 5;
+	var totalGamePoints = 4;
+	var totalFriendshipPoints = 7;
+
+
+	// CALCULATED VALUES
+	var totalPercent = 0.00;
+	var currentMissions = 0;
+	var currentGangWars = 0;
+	var currentBikeRaces = 0;
+	var currentBikeThefts = 0;
+	var currentSeagulls = 0;
+	var currentRandomCharacters = 0;
+	var currentJobs = 0;
+	var currentGamePoints = 0;
+	var currentFriendshipPoints = 0;
+
+
+
+	for (var i = 0; i < data.length; i++) {
+		var key = data[i].split("=")[0];
+		var value = data[i].split("=")[1];
+
+		// THIS AREA ADDS THE VALUES
+		if (key.substring(0, 2) == "MI") currentMissions++;
+		else if (key == "GW") {
+			currentGangWars = parseInt(value);
+			if (currentGangWars > totalGangWars) {
+				currentGangWars = totalGangWars;
+			}
+		}
+		else if (key == "BR") currentBikeRaces = parseInt(value);
+		else if (key == "BT") currentBikeThefts = parseInt(value);
+		else if (key.substring(0, 2) == "SG") currentSeagulls++;
+		else if (key.substring(0, 2) == "RC") currentRandomCharacters++;
+		else if (key.substring(0, 2) == "JO") currentJobs++;
+		else if (key.substring(0, 2) == "GP") currentGamePoints++;
+		else if (key.substring(0, 2) == "FR") currentFriendshipPoints++;
+	}
+
+	// THIS AREA CALCULATES THE OVERALL PERCENTAGE
+
+	totalPercent = ((currentMissions / totalMissions) * 0.65) + ((currentGangWars / totalGangWars) * 0.0333) + ((currentBikeRaces / totalBikeRaces) * 0.0334) + ((currentBikeThefts / totalBikeThefts) * 0.05) + ((currentRandomCharacters / totalRandomCharacters) * 0.0475) + ((currentJobs * totalJobs) / 0.05) + ((currentGamePoints / totalGamePoints) * 0.0525) + ((currentFriendshipPoints / totalFriendshipPoints) * 0.05);
+
+	// THIS AREA PRESENTS IT
+	$("#grand-total").html(floatToPercent(totalPercent, 4));
+	$("#mission-total").html(floatToPercent(currentMissions / totalMissions, 2));
+	$("#gangwar-total").html(floatToPercent(currentGangWars / totalGangWars, 0));
+	$("#bikerace-total").html(floatToPercent(currentBikeRaces / totalBikeRaces, 1));
+	$("#biketheft-total").html(floatToPercent(currentBikeThefts / totalBikeThefts, 0));
+	$("#seagull-total").html(floatToPercent(currentSeagulls / totalSeagulls, 0));
+	$("#random-total").html(floatToPercent(currentRandomCharacters / totalRandomCharacters, 1));
+	console.log(currentSeagulls);
 }
 
