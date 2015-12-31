@@ -255,7 +255,7 @@ var calculate_GTA_TLAD = function() {
 
 	// THIS AREA INITIALISES VALUES FOR CALCULATING THE PERCENTAGES
 	// CONSTANTS
-	var totalMissions = 22;
+	var totalMissions = 27;
 	var totalGangWars = 25;
 	var totalBikeRaces = 12;
 	var totalBikeThefts = 10;
@@ -313,6 +313,5 @@ var calculate_GTA_TLAD = function() {
 	$("#biketheft-total").html(floatToPercent(currentBikeThefts / totalBikeThefts, 0));
 	$("#seagull-total").html(floatToPercent(currentSeagulls / totalSeagulls, 0));
 	$("#random-total").html(floatToPercent(currentRandomCharacters / totalRandomCharacters, 1));
-	console.log(currentSeagulls);
 }
 
