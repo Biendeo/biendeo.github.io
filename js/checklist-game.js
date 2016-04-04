@@ -374,7 +374,7 @@ var calculate_GTA_TBOGT = function() {
 		else if (key == "CF") currentCageFights = parseInt(value);
 		else if (key.substring(0, 2) == "TR") currentTriathlons++;
 		else if (key.substring(0, 2) == "RC") currentRandomCharacters++;
-		else if (key.substring(0, 2) == "FA") currentFriendActivities++;
+		else if (key.substring(0, 2) == "FR") currentFriendActivities++;
 		else if (key.substring(0, 2) == "GA") currentGameActivities++;
 		else if (key.substring(0, 2) == "CA") currentClubActivities++;
 		else if (key.substring(0, 2) == "BJ") currentBaseJumps++;
@@ -383,7 +383,7 @@ var calculate_GTA_TBOGT = function() {
 
 	// THIS AREA CALCULATES THE OVERALL PERCENTAGE
 
-	totalPercent = ((currentMissions / totalMissions) * 0.6) + ((currentClubManagement / totalClubManagement) * 0.1) + ((currentGameActivities / totalGameActivities) * 0.0571) + ((currentFriendActivities / totalFriendActivities) * 0.05) + ((currentRandomCharacters / totalRandomCharacters) * 0.0475) + ((currentClubActivities / totalClubActivities) * 0.0286) + ((currentBaseJumps / totalBaseJumps) * 0.025) + ((currentDrugWars / totalDrugWars) * 0.025) + ((currentTriathlons / totalTriathlons) * 0.025) + ((currentSeagulls / totalSeagulls) * 0.025) + ((currentCageFights / totalCageFights) * 0.0143);
+	totalPercent = ((currentMissions / totalMissions) * 0.6) + ((currentClubManagement / totalClubManagement) * 0.1) + ((currentGameActivities / totalGameActivities) * 0.0571) + ((currentFriendActivities / totalFriendActivities) * 0.05) + ((currentRandomCharacters / totalRandomCharacters) * 0.0475) + ((currentClubActivities / totalClubActivities) * 0.0286) + ((currentBaseJumps / totalBaseJumps) * 0.025) + ((currentDrugWars / totalDrugWars) * 0.025) + ((currentTriathlons / totalTriathlons) * 0.025) + ((currentSeagulls / totalSeagulls) * 0.025) + ((currentCageFights / totalCageFights) * 0.0168);
 
 	// THIS AREA PRESENTS IT
 	$("#grand-total").html(floatToPercent(totalPercent, 4));
@@ -393,4 +393,3 @@ var calculate_GTA_TBOGT = function() {
 	$("#seagull-total").html(floatToPercent(currentSeagulls / totalSeagulls, 0));
 	$("#random-total").html(floatToPercent(currentRandomCharacters / totalRandomCharacters, 0));
 }
-

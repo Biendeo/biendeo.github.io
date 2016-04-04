@@ -1,5 +1,5 @@
 ﻿$(document).ready(function() {
-	$(".main-content").load("html/typewriter.html", function () {
+	$(".main-content").load("../html/typewriter.html", function () {
 		blankSpaceTopAdjust();
 		dialogueProceed(0);
 	});
@@ -115,7 +115,7 @@ var dialogueProceed = function(trigger, input) {
 
 	switch(trigger) {
 		case 0:
-			$(".hidden-text").load("html/typewriter-lines.html #start", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #start", function() {
 				typewriter.screen = 0;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -130,7 +130,7 @@ var dialogueProceed = function(trigger, input) {
 			switch(typewriter.screen) {
 				case 0:
 				default:
-					$(".hidden-text").load("html/typewriter-lines.html #okay", function() {
+					$(".hidden-text").load("../html/typewriter-lines.html #okay", function() {
 						typewriter.screen = 2;
 						typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 						typewriter.speed = 20;
@@ -140,7 +140,7 @@ var dialogueProceed = function(trigger, input) {
 			}
 			break;
 		case 3:
-			$(".hidden-text").load("html/typewriter-lines.html #home", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #home", function() {
 				// Screen does not change.
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -148,7 +148,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 4:
-			$(".hidden-text").load("html/typewriter-lines.html #blank", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #blank", function() {
 				typewriter.screen = 4;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -156,7 +156,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 5:
-			$(".hidden-text").load("html/typewriter-lines.html #code", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #code", function() {
 				typewriter.screen = 5;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -164,7 +164,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 6:
-			$(".hidden-text").load("html/typewriter-lines.html #coolstuff", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #coolstuff", function() {
 				typewriter.screen = 6;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -172,7 +172,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 7:
-			$(".hidden-text").load("html/typewriter-lines.html #about", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #about", function() {
 				typewriter.screen = 7;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -180,7 +180,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 8:
-			$(".hidden-text").load("html/typewriter-lines.html #twitter", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #twitter", function() {
 				typewriter.screen = 8;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -188,7 +188,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 9:
-			$(".hidden-text").load("html/typewriter-lines.html #youtube", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #youtube", function() {
 				typewriter.screen = 9;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -196,7 +196,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 10:
-			$(".hidden-text").load("html/typewriter-lines.html #steam", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #steam", function() {
 				typewriter.screen = 10;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -206,7 +206,7 @@ var dialogueProceed = function(trigger, input) {
 		case 11:
 			var totalJokes = 4;
 			var random = Math.floor(Math.random() * totalJokes) + 1;
-			$(".hidden-text").load("html/typewriter-lines.html #joke" + random.toString(), function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #joke" + random.toString(), function() {
 				typewriter.screen = 11;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -214,7 +214,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 12:
-			$(".hidden-text").load("html/typewriter-lines.html #terminalwars", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #terminalwars", function() {
 				typewriter.screen = 12;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -222,7 +222,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 13:
-			$(".hidden-text").load("html/typewriter-lines.html #github", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #github", function() {
 				typewriter.screen = 13;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -230,7 +230,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 14:
-			$(".hidden-text").load("html/typewriter-lines.html #bitter", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #bitter", function() {
 				typewriter.screen = 14;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -238,7 +238,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 15:
-			$(".hidden-text").load("html/typewriter-lines.html #website", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #website", function() {
 				typewriter.screen = 15;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -246,7 +246,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 16:
-			$(".hidden-text").load("html/typewriter-lines.html #doge", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #doge", function() {
 				typewriter.screen = 16;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -254,7 +254,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 17:
-			$(".hidden-text").load("html/typewriter-lines.html #doge", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #doge", function() {
 				typewriter.screen = 17;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -262,7 +262,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 18:
-			$(".hidden-text").load("html/typewriter-lines.html #new", function() {
+			$(".hidden-text").load("../html/typewriter-lines.html #new", function() {
 				typewriter.screen = 18;
 				typewriter.string = replaceAHrefTags($(".hidden-text").html().replace(/(\r\n|\n|\r)/gm, ""));
 				typewriter.speed = 20;
@@ -270,7 +270,7 @@ var dialogueProceed = function(trigger, input) {
 			});
 			break;
 		case 19:
-			window.location.href = "/html/checklist.html";
+			window.location.href = "../html/checklist.html";
 	}
 };
 
