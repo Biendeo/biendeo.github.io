@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Biendeo&#39;s Cool Website</title>
-    <link>http://www.biendeo.com/categories/</link>
-    <description>Recent content in Categories on Biendeo&#39;s Cool Website</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="http://www.biendeo.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>Categories | Biendeo&#39;s Cool Website</title>
+    <link>https://biendeo.com/categories/</link>
+      <atom:link href="https://biendeo.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 - Thomas Moffet</copyright>
+    <image>
+      <url>https://biendeo.com/images/icon_hua80f1e89acfccf7429878df31cb5bf45_6386_512x512_fill_lanczos_center_2.png</url>
+      <title>Categories</title>
+      <link>https://biendeo.com/categories/</link>
+    </image>
     
   </channel>
 </rss>

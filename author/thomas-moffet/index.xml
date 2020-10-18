@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thomas Moffet | Biendeo&#39;s Cool Website</title>
+    <link>https://biendeo.com/author/thomas-moffet/</link>
+      <atom:link href="https://biendeo.com/author/thomas-moffet/index.xml" rel="self" type="application/rss+xml" />
+    <description>Thomas Moffet</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 - Thomas Moffet</copyright>
+    <image>
+      <url>https://biendeo.com/images/icon_hua80f1e89acfccf7429878df31cb5bf45_6386_512x512_fill_lanczos_center_2.png</url>
+      <title>Thomas Moffet</title>
+      <link>https://biendeo.com/author/thomas-moffet/</link>
+    </image>
+    
+  </channel>
+</rss>

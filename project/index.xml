@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Biendeo&#39;s Cool Website</title>
+    <link>https://biendeo.com/project/</link>
+      <atom:link href="https://biendeo.com/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 - Thomas Moffet</copyright><lastBuildDate>Fri, 31 Jul 2020 09:57:52 +1000</lastBuildDate>
+    <image>
+      <url>https://biendeo.com/images/icon_hua80f1e89acfccf7429878df31cb5bf45_6386_512x512_fill_lanczos_center_2.png</url>
+      <title>Projects</title>
+      <link>https://biendeo.com/project/</link>
+    </image>
+    
+    <item>
+      <title>BlendoBot</title>
+      <link>https://biendeo.com/project/blendobot/</link>
+      <pubDate>Fri, 31 Jul 2020 09:57:52 +1000</pubDate>
+      <guid>https://biendeo.com/project/blendobot/</guid>
+      <description>&lt;p&gt;BlendoBot is a Discord bot written in C# using .NET Core 3.1 which uses dependency injection to easily add new commands to the bot without having to modify the central module of the program.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Clone Hero Modding</title>
+      <link>https://biendeo.com/project/clone-hero/</link>
+      <pubDate>Thu, 30 Jul 2020 10:37:38 +1000</pubDate>
+      <guid>https://biendeo.com/project/clone-hero/</guid>
+      <description>&lt;p&gt;I have writtten several mods for the game Clone Hero using the BepInEx mod loading framework. The mods use reflection to be able to access the underlying game structures, and adds its own functionality to the game at runtime.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Extra Song UI
+&lt;ul&gt;
+&lt;li&gt;Displays extra information such as score targets and number of notes hit to the user in real time while in gameplay.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Perfect Mode
+&lt;ul&gt;
+&lt;li&gt;Automatically restarts the game if the playeer misses a certain note target.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Accuarcy Indicator
+&lt;ul&gt;
+&lt;li&gt;Displays how many milliseconds early or late the player is when hitting notes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Combo Indicator
+&lt;ul&gt;
+&lt;li&gt;Recreates Guitar Hero 3&amp;rsquo;s flashy display for a note streak.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Splash Text Editor
+&lt;ul&gt;
+&lt;li&gt;Enables the user to edit the messages that appear on the title screen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Advent of Code</title>
+      <link>https://biendeo.com/project/advent-of-code/</link>
+      <pubDate>Wed, 29 Jul 2020 11:40:08 +1000</pubDate>
+      <guid>https://biendeo.com/project/advent-of-code/</guid>
+      <description>&lt;p&gt;The 2019 edition Advent of Code was the first one of these challenges that I had completed to the end. It was full of interesting puzzles, and required me to not only discover new algorithms, but also deal with a program that consistently grew larger over time under a changing specification.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BeitaGo</title>
+      <link>https://biendeo.com/project/beitago/</link>
+      <pubDate>Tue, 28 Jul 2020 11:40:13 +1000</pubDate>
+      <guid>https://biendeo.com/project/beitago/</guid>
+      <description>&lt;p&gt;A university thesis project involving recreating AlphaGo as well as possible while limited by using only one home computer. This was written using C++ and the dlib library.&lt;/p&gt;
+&lt;p&gt;The project showed me firstly that, hardware was a few years out from being able to create and train datasets on their own computers, but definitely it&amp;rsquo;s close, as currently it would take several years for a computer to train itself to a competitive level (at least it&amp;rsquo;s not decades or centuries). Also, certain heuristic based methods such as the Monte Carlo Search Tree were quite practical given the recent trend of adding more physical cores in most home computers. It could be possible to leverage this search using GPUs as well.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

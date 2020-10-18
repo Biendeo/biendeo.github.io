@@ -3,26 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.biendeo.com/</loc>
-    <lastmod>2020-07-26T17:59:27+10:00</lastmod>
+    <loc>https://biendeo.com/</loc>
+    <lastmod>2020-10-18T18:46:08+11:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.biendeo.com/posts/</loc>
-    <lastmod>2020-07-26T17:59:27+10:00</lastmod>
+    <loc>https://biendeo.com/project/blendobot/</loc>
+    <lastmod>2020-10-18T18:46:08+11:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.biendeo.com/posts/test-post/</loc>
-    <lastmod>2020-07-26T17:59:27+10:00</lastmod>
+    <loc>https://biendeo.com/project/</loc>
+    <lastmod>2020-10-18T18:46:08+11:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.biendeo.com/categories/</loc>
+    <loc>https://biendeo.com/project/clone-hero/</loc>
+    <lastmod>2020-10-18T18:46:08+11:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.biendeo.com/tags/</loc>
+    <loc>https://biendeo.com/project/advent-of-code/</loc>
+    <lastmod>2020-10-18T18:46:08+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://biendeo.com/project/beitago/</loc>
+    <lastmod>2020-10-18T18:46:08+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://biendeo.com/authors/</loc>
+    <lastmod>2020-10-18T18:46:08+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://biendeo.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://biendeo.com/publication_types/</loc>
+  </url>
+  
+  <url>
+    <loc>https://biendeo.com/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://biendeo.com/author/thomas-moffet/</loc>
+    <lastmod>2020-10-18T18:46:08+11:00</lastmod>
   </url>
   
 </urlset>

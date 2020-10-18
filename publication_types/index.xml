@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publication_types | Biendeo&#39;s Cool Website</title>
+    <link>https://biendeo.com/publication_types/</link>
+      <atom:link href="https://biendeo.com/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publication_types</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 - Thomas Moffet</copyright>
+    <image>
+      <url>https://biendeo.com/images/icon_hua80f1e89acfccf7429878df31cb5bf45_6386_512x512_fill_lanczos_center_2.png</url>
+      <title>Publication_types</title>
+      <link>https://biendeo.com/publication_types/</link>
+    </image>
+    
+  </channel>
+</rss>
