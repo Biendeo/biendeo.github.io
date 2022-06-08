@@ -1,0 +1,31 @@
+---
+layout: post
+---
+<div class="container">
+	<div class="col-8">
+		<b>{{ page.game-title }}</b> for the <i>{{ page.console }}</i>
+		{% if page.wikipedia-url %}
+			<br/><a href="{{ page.wikipeda-url }}">Wikipedia Page</a>
+		{% endif %}
+		{% if page.ra-url %}
+			<br/><a href="{{ page.ra-url }}">RetroAchievements Page</a>
+		{% endif %}
+		{% if page.hltb-url %}
+			<br/><a href="{{ page.hltb-url }}">HowLongToBeat Page</a>
+		{% endif %}
+	</div>
+	<div class="col-4">
+		<img src="{{ page.box-cover-url }}"/>
+	</div>
+</div>
+
+{{ content }}
+
+<div class="container">
+	<h3>Score</h3>
+	{% if page.up-score == nil or page.down-score == nil %}
+		Please add a score!
+	{% else %}
+		{{ page.up-score }} UP, {{ page.down-score }} DOWN
+	{% endif %}
+</div>
