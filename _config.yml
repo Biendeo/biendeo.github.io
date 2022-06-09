@@ -23,10 +23,10 @@ timezone: Australia/Sydney
 
 title: Biendeo's Fun Website
 
-tagline: Where I ramble
+tagline: Where I ramble for fun
 
 description: >-                        # used by seo meta and the atom feed
-  Edit this because it's a description!
+  A cool website where I review things, talk about matters on my mind, and showcase cool things I've worked on.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://www.biendeo.com'
@@ -182,6 +182,7 @@ exclude:
   - gulpfile.js
   - node_modules
   - package*.json
+  - CNAME
 
 jekyll-archives:
   enabled: [categories, tags]

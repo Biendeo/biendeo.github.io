@@ -1,31 +1,52 @@
 ---
 layout: post
 ---
-<div class="container">
-	<div class="col-8">
-		<b>{{ page.game-title }}</b> for the <i>{{ page.console }}</i>
-		{% if page.wikipedia-url %}
-			<br/><a href="{{ page.wikipeda-url }}">Wikipedia Page</a>
-		{% endif %}
-		{% if page.ra-url %}
-			<br/><a href="{{ page.ra-url }}">RetroAchievements Page</a>
-		{% endif %}
-		{% if page.hltb-url %}
-			<br/><a href="{{ page.hltb-url }}">HowLongToBeat Page</a>
-		{% endif %}
-	</div>
-	<div class="col-4">
-		<img src="{{ page.box-cover-url }}"></img>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<div class="container ">
+	<div class="row">
+		<div class="col-9">
+			<b>{{ page.game-title }}</b> for the <i>{{ page.console }}</i><br/>
+			<b>Developer: </b>{{ page.developer }}<br/>
+			<b>Publisher: </b>{{ page.publisher }}<br/>
+			<b>Year: </b>{{ page.year }}<br/>
+			{% if page.wikipedia-url %}
+				<a href="{{ page.wikipedia-url }}">
+					<img src="/assets/img/review/wikipedia.png"/>
+				</a>
+			{% endif %}
+			{% if page.ra-url %}
+				<a href="{{ page.ra-url }}">
+					<img src="/assets/img/review/ra.png"/>
+				</a>
+			{% endif %}
+			{% if page.hltb-url %}
+				<a href="{{ page.hltb-url }}">
+					<img src="/assets/img/review/hltb.png"/>
+				</a>
+			{% endif %}
+			<br/>
+			{% for i in (1..page.up-score) %}
+				<i class="fas fa-thumbs-up"></i>
+			{% endfor %}
+			{% for i in (page.up-score..2) %}
+				<i class="far fa-thumbs-up"></i>
+			{% endfor %}
+			<b>{{ page.up-score }} GOOD</b>
+			<br/>
+			{% for i in (1..page.down-score) %}
+				<i class="fas fa-thumbs-down"></i>
+			{% endfor %}
+			{% for i in (page.down-score..2) %}
+				<i class="far fa-thumbs-down"></i>
+			{% endfor %}
+			<b>{{ page.down-score }} BAD</b>
+		</div>
+		<div class="col-3">
+			<img src="{{ page.box-cover-url }}"/>
+		</div>
 	</div>
 </div>
 
-{{ content }}
-
 <div class="container">
-	<h3>Score</h3>
-	{% if page.up-score == nil or page.down-score == nil %}
-		Please add a score!
-	{% else %}
-		{{ page.up-score }} UP, {{ page.down-score }} DOWN
-	{% endif %}
+	{{ content }}
 </div>
