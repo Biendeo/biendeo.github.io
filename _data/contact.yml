@@ -2,9 +2,9 @@
   type: github
   icon: 'fab fa-github'
 -
-  type: mastodon
-  icon: 'fab fa-mastodon'
-  url: https://mastodon.online/@Biendeo
+  type: pleroma
+  icon: 'fa-brands fa-fediverse'
+  url: https://m.biendeo.com/@Biendeo
 -
   type: twitter
   icon: 'fab fa-twitter'
