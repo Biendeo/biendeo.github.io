@@ -1,0 +1,9 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.table-wrapper > table th,
+.table-wrapper > table td {
+  white-space: normal !important;
+}
